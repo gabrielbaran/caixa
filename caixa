@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	Scanner ler = new Scanner(System.in); 
+        
+        String cpf = "000.000.000-00";
+        String cpfuser;
+        
+        System.out.println(" digite seu CPF: ");
+        cpfuser = ler.next();
+        
+        if(cpf.equals(cpfuser)){
+            System.out.println("cpf correto");
+            
+        int x = 0;
+        
+        while(x<2){
+            String senha = "000000000";
+            String senhauser;
+            
+            System.out.print("digite sua senha: ");
+            senhauser = ler.next();
+            
+            if(senha.equals(senhauser)){
+                System.out.println("senha correta ");
+                System.out.println("");
+                
+                int saldo = 15000
+                int deposito;
+                int saque;
+                int sair;
+                int opcao;
+                
+                
+                System.out.println("=================");
+                System.out.println("digite 1 para Saldo");
+                System.out.println("digite 2 para Depósito");
+                System.out.println("digite 3 para Saque");
+                System.out.println("digite 0 para Sair");
+                System.out.println("=================");
+                
+                System.out.print("digite o numero: ");
+                numero = ler.nextInt();
+                
+                switch(numero){
+                    case 1:
+                        System.out.println(saldo);
+                        System.exit(0);
+                        break;
+                    
+                    case 2:
+                        System.out.print("digite o valor de depósito: ");
+                        deposito = ler.nextInt();
+                        
+                        System.out.println("Saldo atual: R$"+(saldo-deposito));
+                        System.exit(0);
+                        break;
+                    
+                    case 3:
+                        System.out.print("digite o valor do saque:");
+                        saque = ler.nextInt();
+                        
+                        System.out.println("Saldo atual: R$"+(saldo-saque));
+                        System.exit(0);
+                        break;
+                    case 0:
+                        
+                        System.exit(0);
+                 
+                }    
+                }else{
+                System.out.println("senha incorreta");
+                x++;
+            
+            }
+        }
+            
+            
+            }else{
+            System.out.println("CPF Incorreto!");
+        }
+        
